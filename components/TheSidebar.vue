@@ -6,8 +6,8 @@
     @update:show="(value) => $store.commit('set', ['sidebarShow', value])"
   >
     <CSidebarBrand class="d-md-down-none" to="/">
-      <img class="c-sidebar-brand-full" src='@/assets/img/logo-kirimin-white.png'/>
-      <img class="c-sidebar-brand-minimized" src='@/assets/img/logo-kirimin-min.png'/>
+      <img class="c-sidebar-brand-full" src='@/assets/img/logo.png'/>
+      <img class="c-sidebar-brand-minimized" src='@/assets/img/min-logo.png'/>
     </CSidebarBrand>
 
     <CRenderFunction flat :content-to-render="$options.nav"/>

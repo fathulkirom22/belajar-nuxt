@@ -2,7 +2,7 @@
   div.body.text-center
     ValidationObserver(v-slot="{ handleSubmit }")
       b-form.form-signin(@submit.prevent="handleSubmit(singin)")
-        img.mb-4(src="@/assets/img/logo-kirimin.png" alt="")
+        img.mb-4(src="@/assets/img/logo.png" alt="")
         h1.h3.mb-3.font-weight-normal Please login
         label.sr-only(for="inputEmail") E-mail
         ValidationProvider(rules="required|email" name='E-mail' v-slot="validationContext")
@@ -35,7 +35,6 @@ export default {
       var param = {
         email: this.email,
         password: this.password,
-        origin: "cms"
       }
       this.$nextTick(() => {
         this.$nuxt.$loading.start()

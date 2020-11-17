@@ -2,7 +2,8 @@ import webpack from 'webpack'
 require('dotenv').config()
 
 let HOST_API_URL = (process.env.LOCAL_ENV === 'true') ? process.env.BASE_API_URL_LOCAL : process.env.BASE_API_URL
-let API_URL = `${HOST_API_URL}/api/v2`
+let API_URL = `${HOST_API_URL}`
+
 export default {
   target: 'static',
   ssr: false,
@@ -41,9 +42,9 @@ export default {
     strategies: {
       local: {
         endpoints: {
-          login: { url: '/login', method: 'post', propertyName: 'access_token' },
+          login: { url: '/auth/login', method: 'post', propertyName: 'access_token' },
           logout: false,
-          user: { url: '/user', method: 'get', propertyName: '' }
+          user: { url: '/users/profile', method: 'get', propertyName: '' }
         }
       },
     }
